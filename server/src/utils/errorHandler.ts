@@ -25,7 +25,7 @@ export const errorHandler = (
     if (status === 401) {
       return res.status(502).json({
         success: false,
-        message: "Weather provider rejected the API key"
+        message: "Invalid OpenWeather API key. Update WEATHER_API_KEY in server/.env and restart the backend."
       });
     }
 
